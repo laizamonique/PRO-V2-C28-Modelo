@@ -91,23 +91,23 @@ function draw() {
     }
   }
 
-  // Title
+  // Título
   fill("#FFFF");
   textAlign("center");
   textSize(40);
-  text("EPIC ARCHERY", width / 2, 100);
+  text("ARQUEIRO ÉPICO", width / 2, 100);
 
-  // Score
+  // Contagem de Flechas
   fill("#FFFF");
   textAlign("center");
   textSize(30);
-  text("Score " + score, width - 200, 100);
-
-  // Arrow Count
+  text("Flechas Restantes: " + numberOfArrows, 200, 100);
+  
+  // Pontuação
   fill("#FFFF");
   textAlign("center");
   textSize(30);
-  text("Remaining Arrows : " + numberOfArrows, 200, 100);
+  text("Pontuação: " + score, width - 200, 100);
 
   /*if (numberOfArrows == 5) {
     gameOver();
@@ -156,12 +156,12 @@ function keyReleased() {
 function gameOver() {
   swal(
     {
-      title: `Game Over!!!`,
-      text: "Thanks for playing!!",
+     title: `Fim de Jogo!!!`,
+      text: "Obrigado por jogar!!",
       imageUrl:
         "https://raw.githubusercontent.com/vishalgaddam873/PiratesInvision/main/assets/board.png",
       imageSize: "150x150",
-      confirmButtonText: "Play Again"
+      confirmButtonText: "Jogar Novamente"
     },
     function(isConfirm) {
       if (isConfirm) {
